@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>REST Client</title>
+<script
+  src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+  function get_message() {
+    $.getJSON('http://mywebserver.jalalhejazi.c9.io/messages/1', function(result) {
+      $('#para').html(result['message']);
+    });
+  }
+</script>
+</head>
+<body onload="get_message();">
+  <p id="para">ERROR: same-origin policy forbids access to servers on other hosts or ports.</p>
+</body>
+</html>
